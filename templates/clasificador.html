@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasificador de Imágenes</title>
+</head>
+<body>
+    <h1>Clasificador de Imágenes</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="imagen">Sube una imagen (JPEG o PNG):</label><br><br>
+        <input type="file" id="imagen" name="imagen" accept="image/jpeg, image/png"><br><br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    {% if resultado %}
+        <h3>Resultado de la predicción:</h3>
+        <p>{{ resultado }}</p>
+    {% endif %}
+</body>
+</html>
