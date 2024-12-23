@@ -1,0 +1,51 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    height: 50vh;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top: 6vh;
+    text-align: center;
+    border: 2px solid black;
+    & #contenedor-form h1{
+        font-size: 2rem;
+    }
+    & #contenedor-form form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 30vw;
+        padding-top: 3vh;
+        border: 2px solid red;
+    }
+    & #contenedor-form input{
+        width: 16vw;
+        text-align: center;
+        border: 2px solid blue
+    }
+    & #contenedor-form form label{}
+    & form input[type="file"]::-webkit-file-upload-button{}
+    & form input[type="file"]::-webkit-file-upload-button:hover{}
+    & #contenedor-form form button{
+        border: 1.5px solid lightslategray;
+        transition: .5s;
+        height: 4vh;
+        width: 8vw;
+        background-color: lightslategray;
+        color: white;
+        font-weight: bold;
+    }
+    & #contenedor-form form button:hover{
+        background: white;
+        color: darkslategray;
+    }
+    & #contenedor-resultado{}
+    & #contenedor-resultado h3{}
+    & #contenedor-resultado p{}
+}
