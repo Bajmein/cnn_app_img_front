@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'custom.css' %}">
-    <title>Clasificador de Imágenes</title>
-</head>
-<body>
+{% extends 'home.html' %}
+{% block content %}
 <section>
     <div id="contenedor-form">
         <h1>Clasificador de Imágenes</h1>
@@ -20,10 +12,10 @@
     </div>
     <div id="contenedor-resultado">
         {% if resultado %}
-        <h3>Resultado de la predicción:</h3>
-        <p>{{ resultado }}</p>
+            <h3>Resultado de la predicción:</h3>
+            <p>{{ resultado }}</p>
+            <p>Tiempo total de ejecución: {{ tiempo_total }} segundos.</p>
         {% endif %}
     </div>
 </section>
-</body>
-</html>
+{% endblock %}

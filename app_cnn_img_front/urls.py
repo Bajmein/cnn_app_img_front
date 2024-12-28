@@ -1,6 +1,7 @@
 from django.urls import path
-from app_frontal.views import clasificador_imagenes
+from app_frontal.views import clasificador_imagenes, home
 
 urlpatterns: list = [
-    path('', clasificador_imagenes, name='clasificador'),
+    path('', home, name='home'),
+    path('clasificador/', clasificador_imagenes, name='clasificador'),
 ]

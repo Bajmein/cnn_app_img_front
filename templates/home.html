@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'custom.css' %}">
+    <title>Title</title>
+</head>
+<body>
+    <a href="{% url 'clasificador' %}">clasificador</a>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
